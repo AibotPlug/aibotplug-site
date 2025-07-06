@@ -1,0 +1,55 @@
+{{> header}}
+
+<div class="sticky-bar">
+  {{sticky_message}} <a href="{{sticky_cta_link}}" class="cta-btn">{{sticky_cta_text}}</a>
+</div>
+
+<main class="container">
+  <h1>{{page_title}}</h1>
+  <p>{{page_description}}</p>
+
+  <section class="table-section">
+    <h2>{{table_heading}}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Features</th>
+          <th>Pricing</th>
+          <th>Best For</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#tools}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{features}}</td>
+          <td>{{pricing}}</td>
+          <td>{{best_for}}</td>
+          <td><a class="cta-btn" href="{{affiliate_link}}">{{cta_text}}</a></td>
+        </tr>
+        {{/tools}}
+      </tbody>
+    </table>
+  </section>
+
+  {{#offer}}
+  <section class="offer-section">
+    <p class="offer">🎉 {{offer}}</p>
+  </section>
+  {{/offer}}
+
+  {{#summary}}
+  <section class="summary-section">
+    <h2>Quick Highlights</h2>
+    <ul>
+      {{#summary}}
+      <li>✅ <strong>{{tool_name}}</strong>: {{summary_text}}</li>
+      {{/summary}}
+    </ul>
+  </section>
+  {{/summary}}
+</main>
+
+{{> footer}}
